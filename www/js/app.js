@@ -28,6 +28,7 @@ function startScan() {
 		         data : info,
 		         success: function (data, status, jqXHR) {
 		             // do something
+		             resultDiv.innerHTML = "Welcome" + s;
 		             alert("success");
 		         },
 		         error: function (jqXHR, status) {
