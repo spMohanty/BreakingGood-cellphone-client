@@ -27,9 +27,9 @@ function startScan() {
 			// 	med_id : s;
 			// };
 			
-			jQuery.get(medid, function(){
-				alert("working");
-			})
+			// jQuery.get(medid, function(){
+			// 	alert("working");
+			// })
   		// 	$.ajax({
 		  //        type: "GET",		         
 		  //        url: "http://breaking-good-map.cern.ch:5000/check_validity?med_id=" + result.text,
@@ -46,7 +46,7 @@ function startScan() {
 		  //        }
  			// });
  			// alert("returned from ajax");
- 			// //resultDiv.innerHTML = "Welcome" + result.text + "!";
+ 			resultDiv.innerHTML = "Welcome" + result.text + "!";
 
 		}, 
 		function (error) {
