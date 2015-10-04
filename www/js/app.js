@@ -4,11 +4,19 @@
 
 var resultDiv;
 
-document.addEventListener("deviceready", init, false);
+//document.addEventListener("deviceready", init, false);
+
+$(document).ready(function(){
+	init();
+});
+
+
 function init() {
 	document.querySelector("#startScan").addEventListener("touchend", startScan, false);
 	resultDiv = document.querySelector("#results");
 }
+
+
 
 function startScan() {
 	cordova.plugins.barcodeScanner.scan(
@@ -22,14 +30,7 @@ function startScan() {
 			// info = {
 			// 	med_id : s;
 			// };
-			// var xhttp = new XMLHttpRequest();
-			//   	xhttp.onreadystatechange = function() {
-			//     if (xhttp.readyState == 4 && xhttp.status == 200) {
-			//       resultDiv.innerHTML = xhttp.responseText;
-			//     }
-			// }
-  	// 		xhttp.open("GET", medid, true);
-  	// 		xhttp.send();
+			
   			if (window.jQuery) {  
         	    alert("loaded jquery") ;
 	        } else {
