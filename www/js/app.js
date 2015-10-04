@@ -27,23 +27,26 @@ function startScan() {
 			// 	med_id : s;
 			// };
 			
-  			$.ajax({
-		         type: "GET",		         
-		         url: "http://breaking-good-map.cern.ch:5000/check_validity?med_id=" + result.text,
-		         data : info,
-		         success: function (data, status, jqXHR) {
-		             // do something
-		             resultDiv.innerHTML = "Welcome" + s;
-		             resultDiv.html(data);
-		             alert("success");
-		         },
-		         error: function (jqXHR, status) {
-		             // error handler
-		             alert("failure");
-		         }
- 			});
- 			alert("returned from ajax");
- 			resultDiv.innerHTML = "Welcome" + result.text + "!";
+			$.get(medid, function(){
+				alert("working");
+			})
+  		// 	$.ajax({
+		  //        type: "GET",		         
+		  //        url: "http://breaking-good-map.cern.ch:5000/check_validity?med_id=" + result.text,
+		  //        data : info,
+		  //        success: function (data, status, jqXHR) {
+		  //            // do something
+		  //            resultDiv.innerHTML = "Welcome" + s;
+		  //            //resultDiv.html(data);
+		  //            alert("success");
+		  //        },
+		  //        error: function (jqXHR, status) {
+		  //            // error handler
+		  //            alert("failure");
+		  //        }
+ 			// });
+ 			// alert("returned from ajax");
+ 			// //resultDiv.innerHTML = "Welcome" + result.text + "!";
 
 		}, 
 		function (error) {
