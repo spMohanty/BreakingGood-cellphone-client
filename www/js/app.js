@@ -46,7 +46,7 @@ function startScan() {
 		 //             alert("failure");
 		 //         }
  		// 	});
- 			resultDiv.innerHTML = "Welcome" + result.text + "!";
+ 			//resultDiv.innerHTML = "Welcome" + result.text + "!";
 
 		}, 
 		function (error) {
