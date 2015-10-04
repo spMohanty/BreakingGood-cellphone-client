@@ -26,15 +26,15 @@ function startScan() {
 				med_id : s;
 			};
 
-			var xhttp = new XMLHttpRequest();
-			xhttp.onreadystatechange = function() {
-			    if (xhttp.readyState == 4 && xhttp.status == 200) {
-				      resultDiv.innerHTML = xhttp.responseText;
-				    }
-				}
-			}
-			xhttp.open("GET", "http://breaking-good-map.cern.ch:5601/check_validity", true);
-			xhttp.send();
+			// var xhttp = new XMLHttpRequest();
+			// xhttp.onreadystatechange = function() {
+			//     if (xhttp.readyState == 4 && xhttp.status == 200) {
+			// 	      resultDiv.innerHTML = xhttp.responseText;
+			// 	    }
+			// 	}
+			// }
+			// xhttp.open("GET", "http://breaking-good-map.cern.ch:5601/check_validity", true);
+			// xhttp.send();
 
 			// $.ajax({
 		 //         type: "GET",
