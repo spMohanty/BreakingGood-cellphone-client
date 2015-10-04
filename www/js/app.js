@@ -32,28 +32,29 @@ function startScan() {
 				      resultDiv.innerHTML = xhttp.responseText;
 				    }
 				}
-				xhttp.open("GET", "http://breaking-good-map.cern.ch:5601/check_validity", true);
-				xhttp.send();
 			}
+			xhttp.open("GET", "http://breaking-good-map.cern.ch:5601/check_validity", true);
+			xhttp.send();
 
-			//$.ajax({
-	// 	         type: "GET",
+			// $.ajax({
+		 //         type: "GET",
 		         
-	// 	         url: "http://breaking-good-map.cern.ch:5601/check_validity",
+		 //         url: "http://breaking-good-map.cern.ch:5601/check_validity",
 		         
-	// 	         data : info,
+		 //         data : info,
 
 
-	// 	         success: function (data, status, jqXHR) {
-	// 	             // do something
-	// 	             alert("success");
-	// 	         },
+		 //         success: function (data, status, jqXHR) {
+		 //             // do something
+		 //             alert("success");
+		 //         },
 
-	// 	         error: function (jqXHR, status) {
-	// 	             // error handler
-	// 	             alert("failure");
-	// 	         }
- 		}, 
+		 //         error: function (jqXHR, status) {
+		 //             // error handler
+		 //             alert("failure");
+		 //         }
+ 		// 	});
+		}, 
 		function (error) {
 			alert("Scanning failed: " + error);
 		}
