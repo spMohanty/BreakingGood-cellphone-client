@@ -22,30 +22,36 @@ function startScan() {
 			// info = {
 			// 	med_id : s;
 			// };
-			var xhttp = new XMLHttpRequest();
-			  	xhttp.onreadystatechange = function() {
-			    if (xhttp.readyState == 4 && xhttp.status == 200) {
-			      resultDiv.innerHTML = xhttp.responseText;
-			    }
-			}
-  			xhttp.open("GET", medid, true);
-  			xhttp.send();
+			// var xhttp = new XMLHttpRequest();
+			//   	xhttp.onreadystatechange = function() {
+			//     if (xhttp.readyState == 4 && xhttp.status == 200) {
+			//       resultDiv.innerHTML = xhttp.responseText;
+			//     }
+			// }
+  	// 		xhttp.open("GET", medid, true);
+  	// 		xhttp.send();
+  			if (window.jQuery) {  
+        	    alert("loaded jquery") ;
+	        } else {
+	            alert("not loaded")
+	        }
 
-			// $.ajax({
-		 //         type: "GET",		         
-		 //         url: "http://breaking-good-map.cern.ch:5000/check_validity?med_id=" + result.text,
-		 //         data : info,
-		 //         success: function (data, status, jqXHR) {
-		 //             // do something
-		 //             resultDiv.innerHTML = "Welcome" + s;
-		 //             resultDiv.html(data);
-		 //             alert("success");
-		 //         },
-		 //         error: function (jqXHR, status) {
-		 //             // error handler
-		 //             alert("failure");
-		 //         }
- 		// 	});
+
+			$.ajax({
+		         type: "GET",		         
+		         url: "http://breaking-good-map.cern.ch:5000/check_validity?med_id=" + result.text,
+		         data : info,
+		         success: function (data, status, jqXHR) {
+		             // do something
+		             resultDiv.innerHTML = "Welcome" + s;
+		             resultDiv.html(data);
+		             alert("success");
+		         },
+		         error: function (jqXHR, status) {
+		             // error handler
+		             alert("failure");
+		         }
+ 			});
  			//resultDiv.innerHTML = "Welcome" + result.text + "!";
 
 		}, 
