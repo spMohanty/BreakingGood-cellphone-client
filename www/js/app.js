@@ -27,14 +27,10 @@ function startScan() {
 
 			resultDiv.innerHTML = "Welcome" + result.text + "!";
 
-			  var xhttp = new XMLHttpRequest();
-			  xhttp.onreadystatechange = function() {
-			    if (xhttp.readyState == 4 && xhttp.status == 200) {
-			      resultDiv.innerHTML += "<br/>"+xhttp.responseText;
-			    }
-			  }
-			  xhttp.open("GET", medid, true);
-
+			$.support.cors=true;
+			$.get(medid, function(data){
+				resultDiv.innerHTML += "Working !!";
+			})
 
 		}, 
 		function (error) {
