@@ -24,11 +24,17 @@ function startScan() {
 			//resultDiv.innerHTML = s;
 			medid = "http://breaking-good-map.cern.ch:5000/check_validity?med_id=" + result.text;
 
-			$.get(medid, function(data){
-				alert(data);
-			})
 
- 			resultDiv.innerHTML = "Welcome" + result.text + "!";
+			resultDiv.innerHTML = "Welcome" + result.text + "!";
+
+			  var xhttp = new XMLHttpRequest();
+			  xhttp.onreadystatechange = function() {
+			    if (xhttp.readyState == 4 && xhttp.status == 200) {
+			      resultDiv.innerHTML += "<br/>"+xhttp.responseText;
+			    }
+			  }
+			  xhttp.open("GET", medid, true);
+
 
 		}, 
 		function (error) {
