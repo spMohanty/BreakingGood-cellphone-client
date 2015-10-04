@@ -17,7 +17,8 @@ function startScan() {
 			var s = "Result: " + result.text + "<br/>" +
 			"Format: " + result.format + "<br/>" +
 			"Cancelled: " + result.cancelled;
-			resultDiv.innerHTML = s;
+			resultDiv.load('../options.html');
+			// resultDiv.innerHTML = s;
 		}, 
 		function (error) {
 			alert("Scanning failed: " + error);
