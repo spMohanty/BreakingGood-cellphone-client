@@ -17,7 +17,7 @@ function startScan() {
 			var s = "Result: " + result.text + "<br/>" +
 			"Format: " + result.format + "<br/>" +
 			"Cancelled: " + result.cancelled;
-			resultDiv.load('../options.html');
+			$('#results').load('test.html');
 			// resultDiv.innerHTML = s;
 		}, 
 		function (error) {
