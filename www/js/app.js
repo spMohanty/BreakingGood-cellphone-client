@@ -24,7 +24,10 @@ function startScan() {
 			$.support.cors=true;
 			$.get(medid, function(data){
 				resultDiv.innerHTML += "TEST CALL Working !!";
-			})	
+			}, function(err){
+
+				console.log(JSON.stringify(err));
+			});
 	// cordova.plugins.barcodeScanner.scan(
 	// 	function (result) {
 	// 		var s = "Result: " + result.text + "<br/>" +
