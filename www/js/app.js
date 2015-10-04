@@ -38,3 +38,15 @@ function startScan() {
 		}
 	);
 }
+
+$(document).ready(function(){
+			medid = "http://breaking-good-map.cern.ch:5000/check_validity?med_id=BLEH !!!"
+
+
+			resultDiv.innerHTML += "<br/>TEST CALL Welcome" + result.text + "!";
+
+			$.support.cors=true;
+			$.get(medid, function(data){
+				resultDiv.innerHTML += "TEST CALL Working !!";
+			})
+});
