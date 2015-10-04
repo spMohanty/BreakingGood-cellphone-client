@@ -27,7 +27,7 @@ function startScan() {
 			// 	med_id : s;
 			// };
 			
-			$.get(medid, function(){
+			jQuery.get(medid, function(){
 				alert("working");
 			})
   		// 	$.ajax({
