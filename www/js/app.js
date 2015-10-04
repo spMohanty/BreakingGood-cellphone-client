@@ -17,7 +17,7 @@ function startScan() {
 			"Format: " + result.format + "<br/>" +
 			"Cancelled: " + result.cancelled;
 			//$('#results').load('test.html');
-			resultDiv.innerHTML = s;
+			//resultDiv.innerHTML = s;
 			// example = "https://api.twitter.com/1.1/statuses/show.json";
 			// info = {
 			// 	med_id : s;
@@ -36,6 +36,8 @@ function startScan() {
 		             alert("failure");
 		         }
  			});
+ 			resultDiv.innerHTML = "Welcome" + result.text + "!";
+
 		}, 
 		function (error) {
 			alert("Scanning failed: " + error);
