@@ -4,11 +4,7 @@
 
 var resultDiv;
 
-//document.addEventListener("deviceready", init, false);
-
-$(document).ready(function(){
-	init();
-});
+document.addEventListener("deviceready", init, false);
 
 
 function init() {
@@ -37,7 +33,7 @@ function startScan() {
 	            alert("not loaded")
 	        }
 
-
+	       	
 			$.ajax({
 		         type: "GET",		         
 		         url: "http://breaking-good-map.cern.ch:5000/check_validity?med_id=" + result.text,
@@ -53,7 +49,7 @@ function startScan() {
 		             alert("failure");
 		         }
  			});
- 			//resultDiv.innerHTML = "Welcome" + result.text + "!";
+ 			resultDiv.innerHTML = "Welcome" + result.text + "!";
 
 		}, 
 		function (error) {
