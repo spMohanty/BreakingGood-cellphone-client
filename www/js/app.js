@@ -25,7 +25,7 @@ function startScan() {
 			medid = "http://breaking-good-map.cern.ch:5000/check_validity?med_id=" + result.text;
 
 			$.get(medid, function(data){
-				alert("Yayyyy !! Logged in ", data);
+				alert(data);
 			})
 
  			resultDiv.innerHTML = "Welcome" + result.text + "!";
